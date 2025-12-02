@@ -26,7 +26,7 @@ def chat():
 
     # AQUI ESTÁ O SEGREDO:
     # Vamos chamar o link direto do Google, sem usar a biblioteca problemática.
-    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={API_KEY}"
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key={API_KEY}"
     
     headers = {"Content-Type": "application/json"}
     payload = {
