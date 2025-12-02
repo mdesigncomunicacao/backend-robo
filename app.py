@@ -12,7 +12,7 @@ MINHA_API_KEY = os.environ.get("GOOGLE_API_KEY")
 genai.configure(api_key=MINHA_API_KEY)
 
 # Configuração do modelo
-model = genai.GenerativeModel('gemini-1.5-flash')
+model = genai.GenerativeModel('gemini-pro')
 
 @app.route('/')
 def home():
