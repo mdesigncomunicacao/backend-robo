@@ -10,7 +10,7 @@ API_KEY = os.environ.get("GOOGLE_API_KEY")
 
 @app.route('/')
 def home():
-    return "Robô VIVO! (Modo Gemini Pro)"
+    return "Robô VIVO! (Gemini 1.5 Flash)"
 
 @app.route('/chat', methods=['POST'])
 def chat():
@@ -23,8 +23,8 @@ def chat():
     if not API_KEY:
         return jsonify({"erro": "Chave de API não configurada"}), 500
 
-    # AQUI ESTÁ A CORREÇÃO: Usando 'gemini-pro' que funciona em todas as contas
-    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key={API_KEY}"
+    # URL CORRETA PARA O MODELO FLASH (V1BETA)
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={API_KEY}"
     
     headers = {"Content-Type": "application/json"}
     payload = {
